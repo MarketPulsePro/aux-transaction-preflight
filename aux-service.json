@@ -1,0 +1,38 @@
+{
+  "name": "AUX Transaction Preflight",
+  "canonical_origin": "https://aux.prdictionedge.ai",
+  "purpose": "Evidence-backed pre-transaction risk screening for autonomous agents",
+  "problem_vocabulary": [
+    "transaction preflight",
+    "payment verification",
+    "invoice validation",
+    "vendor verification",
+    "duplicate invoice detection",
+    "payment destination change detection",
+    "counterparty risk screening",
+    "signed decision receipt"
+  ],
+  "discovery": {
+    "api_catalog": "https://aux.prdictionedge.ai/.well-known/api-catalog?source=github-public-spec",
+    "identity": "https://aux.prdictionedge.ai/.well-known/aux",
+    "a2a_agent_card": "https://aux.prdictionedge.ai/.well-known/agent-card.json?source=github-public-spec",
+    "mcp_server": "https://aux.prdictionedge.ai/mcp-server.json?source=github-public-spec",
+    "mcp_endpoint": "https://aux.prdictionedge.ai/mcp/v1?source=github-public-spec",
+    "capabilities": "https://aux.prdictionedge.ai/api/capabilities.json",
+    "openapi": "https://aux.prdictionedge.ai/openapi.json?source=github-public-spec",
+    "trust": "https://aux.prdictionedge.ai/api/trust.json",
+    "examples": "https://aux.prdictionedge.ai/api/examples",
+    "improvements": "https://aux.prdictionedge.ai/api/improvements.json",
+    "distribution": "https://aux.prdictionedge.ai/api/distribution.json",
+    "status": "https://aux.prdictionedge.ai/api/status"
+  },
+  "availability": {
+    "status": "public_evaluation_service",
+    "price_usd": 0,
+    "authentication": "none",
+    "safe_test_data_only": true,
+    "live_external_verification": false,
+    "production_sla": false
+  },
+  "updated": "2026-08-20"
+}

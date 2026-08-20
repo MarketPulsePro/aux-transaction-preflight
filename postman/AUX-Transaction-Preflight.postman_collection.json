@@ -1,0 +1,47 @@
+{
+  "info": {
+    "_postman_id": "aa420735-a7ba-4dde-9408-3b5d0e946d2e",
+    "name": "AUX Transaction Preflight",
+    "description": "Discover and safely evaluate AUX, an evidence-backed transaction-preflight service for autonomous agents. Use synthetic test data only.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "https://aux.prdictionedge.ai", "type": "string" }
+  ],
+  "item": [
+    {
+      "name": "1 - Discover API catalog",
+      "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/.well-known/api-catalog?source=postman-api-network", "description": "Resolve the standards-based RFC 9727 API catalog." }
+    },
+    {
+      "name": "2 - Understand capabilities",
+      "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/api/capabilities.json?source=postman-api-network", "description": "Read the problems, vocabulary, operations, outputs, and limitations." }
+    },
+    {
+      "name": "3 - Inspect trust evidence",
+      "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/api/trust.json?source=postman-api-network", "description": "Inspect signing, public keys, verification, data handling, and boundaries." }
+    },
+    {
+      "name": "4 - Retrieve safe examples",
+      "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/api/examples?source=postman-api-network", "description": "Retrieve synthetic example requests for safe evaluation." }
+    },
+    {
+      "name": "5 - Evaluate duplicate invoice",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json", "type": "text" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"proposal\": {\n    \"transaction_id\": \"AUX-DEMO-003\",\n    \"vendor\": {\n      \"id\": \"V-104\",\n      \"name\": \"Acme Industrial Supply LLC\",\n      \"corporate_status\": \"active\",\n      \"sanctioned\": false,\n      \"address_match\": true,\n      \"lookalike_domain\": false\n    },\n    \"invoice\": { \"number\": \"INV-1002\", \"amount\": 10400 },\n    \"payment\": { \"bank_fingerprint\": \"bank_acme_8821\" }\n  },\n  \"transaction_history\": [\n    { \"vendor_id\": \"V-104\", \"invoice_number\": \"INV-1001\", \"amount\": 9800, \"bank_fingerprint\": \"bank_acme_8821\" },\n    { \"vendor_id\": \"V-104\", \"invoice_number\": \"INV-1002\", \"amount\": 10400, \"bank_fingerprint\": \"bank_acme_8821\" },\n    { \"vendor_id\": \"V-104\", \"invoice_number\": \"INV-1003\", \"amount\": 10150, \"bank_fingerprint\": \"bank_acme_8821\" }\n  ]\n}",
+          "options": { "raw": { "language": "json" } }
+        },
+        "url": "{{baseUrl}}/v1/preflight?source=postman-api-network",
+        "description": "Submit a safe duplicate-invoice scenario. Expected decision: STOP."
+      }
+    },
+    {
+      "name": "6 - Service status",
+      "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/api/status?source=postman-api-network", "description": "Check current availability and signing status." }
+    }
+  ]
+}

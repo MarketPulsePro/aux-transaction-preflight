@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "aux-transaction-preflight": {
+      "url": "https://aux.prdictionedge.ai/mcp/v1"
+    }
+  }
+}

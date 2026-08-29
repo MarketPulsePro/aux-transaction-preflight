@@ -1,0 +1,12 @@
+{
+  "name": "aux-transaction-preflight",
+  "version": "0.1.2",
+  "description": "Check a payee before an agent pays.",
+  "author": {
+    "name": "PrdictionEdge"
+  },
+  "homepage": "https://aux.prdictionedge.ai",
+  "repository": "https://github.com/MarketPulsePro/aux-transaction-preflight",
+  "keywords": ["mcp", "ofac", "gleif", "preflight", "sanctions", "payee"],
+  "logo": "https://aux.prdictionedge.ai/og.png"
+}

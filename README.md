@@ -1,3 +1,5 @@
+Ask your bot to go to https://aux.prdictionedge.ai and give you a short report on what AUX does.
+
 # AUX Transaction Preflight
 
 AUX is a machine-readable pre-transaction risk-screening service for autonomous agents. It evaluates a proposed B2B payment against caller-supplied transaction history and returns a `PROCEED`, `REVIEW`, or `STOP` decision with evidence signals and a machine-verifiable signed receipt.

@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "dataset": "US Treasury OFAC Sanctions List Service CSV mirror",
+  "authority": "https://ofac.treasury.gov/sanctions-list-service",
+  "mirror_operator": "AUX / PrdictionEdge",
+  "retrieved_at": "2026-08-29T04:14:47.768Z",
+  "valid_until": "2026-08-29T16:14:47.768Z",
+  "refresh_interval_hours": 6,
+  "files": [
+    {
+      "name": "SDN.CSV",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.CSV",
+      "bytes": 5670063,
+      "sha256": "a2ccea04237a13459009bc527502bb6a08d4e84fe97b46fcce1ed621e9a8301e",
+      "source_last_modified": "Fri, 28 Aug 2026 14:02:55 GMT"
+    },
+    {
+      "name": "CONS_PRIM.CSV",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONS_PRIM.CSV",
+      "bytes": 262810,
+      "sha256": "fa681487dfd865c189177b478a171178ab8e7133402342acc51f638a7bc121de",
+      "source_last_modified": "Fri, 28 Aug 2026 14:02:55 GMT"
+    },
+    {
+      "name": "ALT.CSV",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ALT.CSV",
+      "bytes": 1061126,
+      "sha256": "a4cae601ae9cd8ef977dc08da48d47a2cc59a1383cc0677fa812421b48025e39",
+      "source_last_modified": "Fri, 28 Aug 2026 14:02:56 GMT"
+    },
+    {
+      "name": "CONS_ALT.CSV",
+      "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONS_ALT.CSV",
+      "bytes": 69302,
+      "sha256": "303059e2484bfa7d669e6a5c202259c181d634eefe293528be8580706da33741",
+      "source_last_modified": "Fri, 28 Aug 2026 14:02:56 GMT"
+    }
+  ],
+  "integrity_policy": "AUX accepts a mirror file only while this manifest is fresh and its byte count and SHA-256 match."
+}

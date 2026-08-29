@@ -1,0 +1,36 @@
+name: Refresh OFAC evidence mirror
+
+on:
+  push:
+    paths:
+      - "scripts/refresh-ofac.mjs"
+      - ".github/workflows/refresh-ofac.yml"
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-ofac-evidence
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Download and validate official OFAC files
+        run: node scripts/refresh-ofac.mjs data/ofac
+      - name: Publish fresh files and integrity manifest
+        run: |
+          git config user.name "aux-evidence-bot"
+          git config user.email "aux-evidence-bot@users.noreply.github.com"
+          git add data/ofac
+          git commit -m "Refresh verified OFAC evidence mirror"
+          git push

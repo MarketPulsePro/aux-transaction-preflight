@@ -3,8 +3,8 @@
   "dataset": "US Treasury OFAC Sanctions List Service CSV mirror",
   "authority": "https://ofac.treasury.gov/sanctions-list-service",
   "mirror_operator": "AUX / PrdictionEdge",
-  "retrieved_at": "2026-09-14T21:47:33.346Z",
-  "valid_until": "2026-09-15T09:47:33.346Z",
+  "retrieved_at": "2026-09-15T04:50:30.506Z",
+  "valid_until": "2026-09-15T16:50:30.506Z",
   "refresh_interval_hours": 6,
   "files": [
     {

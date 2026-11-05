@@ -3,37 +3,37 @@
   "dataset": "US Treasury OFAC Sanctions List Service CSV mirror",
   "authority": "https://ofac.treasury.gov/sanctions-list-service",
   "mirror_operator": "AUX / PrdictionEdge",
-  "retrieved_at": "2026-11-05T06:39:35.882Z",
-  "valid_until": "2026-11-05T18:39:35.882Z",
+  "retrieved_at": "2026-11-05T19:53:39.634Z",
+  "valid_until": "2026-11-06T07:53:39.634Z",
   "refresh_interval_hours": 6,
   "files": [
     {
       "name": "SDN.CSV",
       "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.CSV",
-      "bytes": 5815063,
-      "sha256": "ebbbce82570fd05f5f53db0f30eca2541a914b47f1044a1568760b51a4753654",
-      "source_last_modified": "Wed, 04 Nov 2026 17:33:12 GMT"
+      "bytes": 5830419,
+      "sha256": "8e94d8715b81f54a7d769c52af7fcefea19d48eead54bb9d974f4a62dadd9536",
+      "source_last_modified": "Thu, 05 Nov 2026 17:30:40 GMT"
     },
     {
       "name": "CONS_PRIM.CSV",
       "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONS_PRIM.CSV",
       "bytes": 268568,
       "sha256": "4fe4f7faf8c5c329bb9f7cd5e145794aa267b21ec2ee5df82bacdd1d60a20545",
-      "source_last_modified": "Wed, 04 Nov 2026 17:33:12 GMT"
+      "source_last_modified": "Thu, 05 Nov 2026 17:30:41 GMT"
     },
     {
       "name": "ALT.CSV",
       "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ALT.CSV",
-      "bytes": 1064485,
-      "sha256": "465e901ff8b4cf3b213f9c06ffccc2dfcb2a8eb9cb83560083a157f09f101ce5",
-      "source_last_modified": "Wed, 04 Nov 2026 17:33:12 GMT"
+      "bytes": 1064805,
+      "sha256": "1e9363331a88cdb6eb42a386b30ac9aab9866ba228c1d84f7eea6bab1e94f232",
+      "source_last_modified": "Thu, 05 Nov 2026 17:30:41 GMT"
     },
     {
       "name": "CONS_ALT.CSV",
       "source_url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONS_ALT.CSV",
       "bytes": 69622,
       "sha256": "106ba0e33579c5d20693e414ad66a9145329f1db012a18c3bdc8f84491a32b81",
-      "source_last_modified": "Wed, 04 Nov 2026 17:33:13 GMT"
+      "source_last_modified": "Thu, 05 Nov 2026 17:30:41 GMT"
     }
   ],
   "integrity_policy": "AUX accepts a mirror file only while this manifest is fresh and its byte count and SHA-256 match."
